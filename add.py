@@ -21,3 +21,29 @@ while True:
     m -= 1
     
 print(result)
+
+#####
+##더 효율적인 코드로 짜보자
+#반복되는 수열에 대해서 파악해야한다.
+#int(m/(k+1))*k 앞에는 수열이 반복되는 횟수, k를 곱해주면 가장 큰 수가 등장하는 횟수
+# +(m%(k+1)) m이 나누어떨어지지 않는 경우 고려
+
+##int(m/(k+1)*k)+(m%(k+1))
+n, m, k = map(int, input().split)
+data = list(map(int, input().split))
+
+data.sort() #데이터 정렬
+first = data[n-1]
+second = data[n-2]
+
+#가장 큰 수가 더해지는 횟수 계산
+count = int(m/(k+1))*k
+count += m%(k+1)
+
+result = 0
+result += (count) * first
+result += (m-count) * second
+
+print(result)
+
+##파이썬에서는 A를 B로 나눈 몫을 구하기 위해 int(A/B) or A//B 라고 작성한다.
