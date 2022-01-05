@@ -9,8 +9,7 @@ while n >= 1:
         break
     n -= 3
     count += 1
-    
-    else:
+else :
         print(-1)
         
     
