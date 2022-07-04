@@ -1,5 +1,3 @@
-import javax.naming.spi.DirStateFactory.Result;
-
 import java.util.*;
 
 // 배열 이용
