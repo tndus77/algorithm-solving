@@ -1,3 +1,4 @@
+package 정렬;
 import java.util.*;
 
 class Solution {
