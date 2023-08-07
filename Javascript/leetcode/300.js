@@ -24,18 +24,14 @@ function solution(input) {
 	let answer = 0;
 
 	for (let i = 0; i < arr.length; i++) {
-		if (i === 0) {
-			dy[i] = 1;
-		} else {
-			let max = 0;
-			for (let j = i - 1; j >= 0; j--) {
-				if (arr[i] > arr[j] && dy[j] > max) {
-					max = dy[j];
-				}
-				dy[i] = max + 1;
+		let max = 0;
+		for (let j = i - 1; j >= 0; j--) {
+			if (arr[i] > arr[j] && dy[j] > max) {
+				max = dy[j];
 			}
+			dy[i] = max + 1;
 		}
-		answer = Math.max(answer, dy[i]);
+		answer = Math.max(answer, dy[i]); // 최대값을 지속적으로 저장한다.
 	}
 	console.log(answer);
 }
