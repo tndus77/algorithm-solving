@@ -8,7 +8,7 @@ solution(input);
 function solution(input) {
 	const num = +input[0];
 
-	const scoreArr = input[1].split(' ').map((item) => +item);
+	const scoreArr = +input[1].split(' ').map((item) => +item);
 	const rankArr = Array.from({ length: num }, () => 1);
 	console.log(scoreArr);
 	console.log(rankArr);
