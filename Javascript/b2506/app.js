@@ -13,7 +13,7 @@ function solution(input) {
 	let cnt = 0;
 	let answer = 0;
 
-	for (let i = 0; i < num - 1; i++) {
+	for (let i = 0; i < num; i++) {
 		if (Number(arr[i]) === 1) {
 			cnt++;
 			answer += cnt;
