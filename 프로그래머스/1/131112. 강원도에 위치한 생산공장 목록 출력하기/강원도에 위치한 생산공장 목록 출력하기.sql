@@ -1,0 +1,3 @@
+select FACTORY_ID, FACTORY_NAME,ADDRESS
+from FOOD_FACTORY
+where TLNO like '033%'
