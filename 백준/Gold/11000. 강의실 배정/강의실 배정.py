@@ -2,18 +2,20 @@ import sys
 import heapq
 input = sys.stdin.readline
 
-n = int(input())
-time = [list(map(int, input().split())) for _ in range(n)]
-time.sort()
+N = int(input())
+lst = [list(map(int, input().split())) for _ in range(N)]
+lst.sort()
 
-Q = []
-heapq.heappush(Q, time[0][1]) # 현재 강의의 끝나는 시간
+q = []
+heapq.heappush(q, lst[0][1])
 
-for i in range(1, n):
-  if time[i][0] < Q[0]: # 다음 강의의 시작 시간이 현재 끝나는 시간보다 작으면
-    heapq.heappush(Q, time[i][1]) # 강의실 하나 추가
-  else:
-    heapq.heappop(Q) # 현재 들어있는 종료 시간 꺼내기
-    heapq.heappush(Q, time[i][1]) # 다시 새로운 종료 시간으로 갱신
+for i in range(1, N):
+  start, end = lst[i]
+  
+  if start < q[0]: # new 시작 시간 < 끝나는 시간
+    heapq.heappush(q, end)
+  else: # new 시작 시간 >= 끝나는 시간
+    heapq.heappop(q)
+    heapq.heappush(q, end)
 
-print(len(Q))
+print(len(q))
