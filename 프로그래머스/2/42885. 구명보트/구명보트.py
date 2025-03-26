@@ -1,20 +1,13 @@
-from collections import deque
 def solution(people, limit):
     answer = 0
-    
     people.sort()
-    q = deque(people)
+    left, right = 0, len(people) - 1
     
-    while len(q) > 1:
-        if q[0] + q[-1] <= limit: # 최소값과 최댓값이 limit보다 작으면
-            q.popleft()
-            q.pop()
-        else: # limit보다 크면 최댓값 빼기
-            q.pop()
+    while left <= right:
+        if people[left] + people[right] <= limit:
+            # 가장 가벼운 사람과 무거운 사람을 태울 수 있으면
+            left += 1
+        # 무거운 사람은 항상 태운다
+        right -= 1
         answer += 1
-    
-    if q: #1명 남아 있을 때
-        answer += 1
-            
-    
     return answer
