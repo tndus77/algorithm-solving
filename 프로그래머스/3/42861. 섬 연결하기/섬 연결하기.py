@@ -1,24 +1,24 @@
 def solution(n, costs):
+    answer = 0
+    costs.sort(key=lambda x:x[2])
+    # 부모 노드 초기화
     parent = [i for i in range(n)]
-    
     def find(x):
         if parent[x] != x:
             parent[x] = find(parent[x])
         return parent[x]
-    
     def union(a, b):
-        root_a = find(a)
-        root_b = find(b)
+        a = find(a)
+        b = find(b)
+        print(a, b)
         
-        if root_a != root_b:
-            parent[root_b] = root_a
-            return True
-        return False
-    
-    total = 0
-    costs.sort(key=lambda x:x[2])
+        if a > b:
+            parent[a] = b
+        else:
+            parent[b] = a
+
     for a, b, cost in costs:
-        if union(a, b): # 사이클이 없다면
-            total += cost
-    
-    return total
+        if find(a) != find(b):
+            union(a, b)
+            answer += cost
+    return answer
