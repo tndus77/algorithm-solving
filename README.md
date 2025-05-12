@@ -13,4 +13,16 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0242-valid-anagram](https://github.com/tndus77/algorithm-solving/tree/master/0242-valid-anagram) |
+## Array
+|  |
+| ------- |
+| [0289-game-of-life](https://github.com/tndus77/algorithm-solving/tree/master/0289-game-of-life) |
+## Matrix
+|  |
+| ------- |
+| [0289-game-of-life](https://github.com/tndus77/algorithm-solving/tree/master/0289-game-of-life) |
+## Simulation
+|  |
+| ------- |
+| [0289-game-of-life](https://github.com/tndus77/algorithm-solving/tree/master/0289-game-of-life) |
 <!---LeetCode Topics End-->
