@@ -1,20 +1,24 @@
-import sys
-n = int(input())
-m = int(input()) # 간선수 
-node = [[] for i in range(n+1)]
-visited = [0] * (n+1)
+computers = int(input())
+node = int(input())
 
-for _ in range(m):
-  a, b = map(int, sys.stdin.readline().split())
-  node[a] += [b]
-  node[b] += [a]
+networks = [[] for _ in range(computers + 1)]
+visited = [False] * (computers + 1)
+cnt = 0
 
-def dfs(v):
-  visited[v] = 1
+for i in range(node):
+  [a, b] = list(map(int, input().split()))
+  networks[a].append(b)
+  networks[b].append(a)
 
-  for nx in node[v]:
-    if visited[nx] == 0:
-      dfs(nx)
+def dfs(x):
+  global cnt
+  visited[x] = True
+
+  for curr in networks[x]:
+    if not visited[curr]:
+      cnt += 1
+      dfs(curr)
 
 dfs(1)
-print(sum(visited) - 1)
+
+print(cnt)
