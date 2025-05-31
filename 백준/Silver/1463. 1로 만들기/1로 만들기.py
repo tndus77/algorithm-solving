@@ -1,12 +1,24 @@
-n = int(input())
-count = 0
-dp = [0] * (n+1)
+import sys
+input = sys.stdin.readline
 
-for i in range(2, n+1):
-  dp[i] = dp[i-1] + 1
-  if i % 3 == 0:
-    dp[i] = min(dp[i], dp[i//3] + 1) #dp[i]는 이미 위에서 더해줬기 때문에
-  if i % 2 == 0:
-    dp[i] = min(dp[i], dp[i//2] + 1)
+N = int(input())
+dp = [0] * (N+1)
 
-print(dp[n])
+# 재귀 - Top-down 방식
+def rec(n):
+    if dp[n] != 0:
+        return dp[n]
+    if n == 1:
+        return 0
+
+    if n % 3 == 0 and n % 2 == 0:
+        dp[n] = min(rec(n//3) + 1, rec(n//2) + 1)
+    elif n % 3 == 0:
+        dp[n] = min(rec(n-1)+1, rec(n//3)+1)
+    elif n % 2 == 0:
+        dp[n] = min(rec(n-1)+1, rec(n//2)+1)
+    else:
+        dp[n] = rec(n-1) + 1
+    return dp[n]
+
+print(rec(N))
