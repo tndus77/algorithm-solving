@@ -15,11 +15,13 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0056-merge-intervals](https://github.com/tndus77/algorithm-solving/tree/master/0056-merge-intervals) |
 | [0075-sort-colors](https://github.com/tndus77/algorithm-solving/tree/master/0075-sort-colors) |
 | [0242-valid-anagram](https://github.com/tndus77/algorithm-solving/tree/master/0242-valid-anagram) |
+| [0274-h-index](https://github.com/tndus77/algorithm-solving/tree/master/0274-h-index) |
 ## Array
 |  |
 | ------- |
 | [0056-merge-intervals](https://github.com/tndus77/algorithm-solving/tree/master/0056-merge-intervals) |
 | [0075-sort-colors](https://github.com/tndus77/algorithm-solving/tree/master/0075-sort-colors) |
+| [0274-h-index](https://github.com/tndus77/algorithm-solving/tree/master/0274-h-index) |
 | [0289-game-of-life](https://github.com/tndus77/algorithm-solving/tree/master/0289-game-of-life) |
 ## Matrix
 |  |
@@ -33,4 +35,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0075-sort-colors](https://github.com/tndus77/algorithm-solving/tree/master/0075-sort-colors) |
+## Counting Sort
+|  |
+| ------- |
+| [0274-h-index](https://github.com/tndus77/algorithm-solving/tree/master/0274-h-index) |
 <!---LeetCode Topics End-->
