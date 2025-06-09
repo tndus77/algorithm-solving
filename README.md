@@ -4,10 +4,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Hash Table
 |  |
 | ------- |
+| [0017-letter-combinations-of-a-phone-number](https://github.com/tndus77/algorithm-solving/tree/master/0017-letter-combinations-of-a-phone-number) |
 | [0242-valid-anagram](https://github.com/tndus77/algorithm-solving/tree/master/0242-valid-anagram) |
 ## String
 |  |
 | ------- |
+| [0017-letter-combinations-of-a-phone-number](https://github.com/tndus77/algorithm-solving/tree/master/0017-letter-combinations-of-a-phone-number) |
 | [0242-valid-anagram](https://github.com/tndus77/algorithm-solving/tree/master/0242-valid-anagram) |
 ## Sorting
 |  |
@@ -39,4 +41,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0274-h-index](https://github.com/tndus77/algorithm-solving/tree/master/0274-h-index) |
+## Backtracking
+|  |
+| ------- |
+| [0017-letter-combinations-of-a-phone-number](https://github.com/tndus77/algorithm-solving/tree/master/0017-letter-combinations-of-a-phone-number) |
 <!---LeetCode Topics End-->
