@@ -1,18 +1,20 @@
+import sys
+
 n, k = map(int, input().split())
-arr = []
 
-for i in range(n):
-  arr.append(input())
+coins = [int(input()) for _ in range(n)]
 
-sorted(arr)
-arr.reverse()
+coins = list(filter(lambda x: x <= k, coins))
 
-ans = 0
+cnt = 0
+for i in range(len(coins)-1, -1, -1):
+  curr = coins[i]
+  if k <= 0:
+    break
+  if k < curr:
+    continue
+  
+  cnt += k // curr
+  k %= curr
 
-for x in arr:
-  if k >= int(x):
-    ans += k // int(x)
-    k %= int(x)
-
-print(ans)    
-
+print(cnt)
